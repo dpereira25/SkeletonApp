@@ -1,9 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-buttons>
-      <ion-back-button>
-
-      </ion-back-button>
+      <ion-back-button></ion-back-button>
     </ion-buttons>
     <ion-title>Login</ion-title>
   </ion-toolbar>
@@ -16,14 +14,26 @@
     </ion-toolbar>
   </ion-header>
 
-  <div class="container">
+  <ion-card>
+    <ion-card-content>
     <ion-item>
       <ion-input label="Usuario" label-placement="floating" fill="outline" placeholder=""></ion-input>
     </ion-item>
     <ion-item>
-      <ion-input label="Contraseña" label-placement="floating" fill="outline" placeholder=""></ion-input>
+      <ion-input type="password" label="Contraseña" label-placement="floating" fill="outline" placeholder=""></ion-input>
     </ion-item>
-    
-  </div>
+
+    <div class="ion-text-center">
+      <ion-button [routerLink]="['/login-exitoso']" color="medium" >Iniciar Sesión</ion-button>
+    </div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-footer>
+    <ion-content>
+      <h4>Estamos trabajando en esta aplicacion aun.</h4>
+    </ion-content>
+  </ion-footer>
 </ion-content>
+
 
