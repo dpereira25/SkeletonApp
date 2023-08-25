@@ -10,30 +10,33 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Login</ion-title>
+      <ion-title size="large" class="ion-text-start">Login</ion-title>
+      <ion-button [routerLink]="['/home']" slot="end" color="light" size="small"> 
+        <ion-icon name="home-outline"></ion-icon>
+      </ion-button>
     </ion-toolbar>
   </ion-header>
+  
 
   <ion-card>
     <ion-card-content>
     <ion-item>
-      <ion-input label="Usuario" label-placement="floating" fill="outline" placeholder=""></ion-input>
+      <ion-label position="floating">Username</ion-label>
+      <ion-input [(ngModel)]="username"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-input type="password" label="Contraseña" label-placement="floating" fill="outline" placeholder=""></ion-input>
+      <ion-label position="floating">Password</ion-label>
+      <ion-input [(ngModel)]="password" type="password" class="ion-input"></ion-input>    
     </ion-item>
 
     <div class="ion-text-center">
-      <ion-button [routerLink]="['/login-exitoso']" color="medium" >Iniciar Sesión</ion-button>
+      <ion-button [routerLink]="['/login-exitoso']" color="medium" >Login</ion-button>
+      <ion-button color="medium" (click)="clearAnimation()">Clear</ion-button>
     </div>
     </ion-card-content>
   </ion-card>
 
-  <ion-footer>
-    <ion-content>
-      <h4>Estamos trabajando en esta aplicacion aun.</h4>
-    </ion-content>
-  </ion-footer>
+  
 </ion-content>
 
 

@@ -10,33 +10,34 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Registro</ion-title>
+      <ion-title size="large">Register</ion-title>
     </ion-toolbar>
   </ion-header>
 
   <ion-card>
     <ion-item>
-      <ion-input label="Usuario" label-placement="floating" fill="outline" placeholder=""></ion-input>
+      <ion-label position="floating">User</ion-label>
+      <ion-input [(ngModel)]="username"></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-input label="Contraseña" label-placement="floating" fill="outline" placeholder=""></ion-input>
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="password" [(ngModel)]="password"></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-input label="Correo electrónico" label-placement="floating" fill="outline" placeholder="" type="mail"></ion-input>
+      <ion-label position="floating">Confirm password</ion-label>
+      <ion-input type="password" [(ngModel)]="confirmPw"></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-input label="Nombre" label-placement="floating" fill="outline" placeholder=""></ion-input>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input [(ngModel)]="email"></ion-input>
     </ion-item>
-
-    <ion-item>
-      <ion-input label="Apellido" label-placement="floating" fill="outline" placeholder=""></ion-input>
-    </ion-item>
-
-    <div class="ion-text-center">
-      <ion-button color="medium" (click)="presentAlert()">Registrarse</ion-button>
-    </div>
   </ion-card>
+
+  <div class="ion-text-center ion-margin-top">
+    <ion-button color="medium" (click)="presentAlert()">Sign up</ion-button>
+    <ion-button color="medium" (click)="clearFields()">Clear</ion-button>
+  </div>
 </ion-content>

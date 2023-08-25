@@ -1,22 +1,48 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-buttons>
-      <ion-back-button></ion-back-button>
+      <ion-back-button [routerLink]="['/login']" default-href="#"></ion-back-button>
     </ion-buttons>
-    <ion-title>Login Exitoso</ion-title>
+    <ion-title>User's profile</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Login</ion-title>
+      <ion-title size="large">User's profile</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <ion-card>
-    <div class="ion-text-center">
-      <h4>Felicitaciones! Estamos trabajando en esta pagina de momento..</h4>
-    </div>
-  </ion-card>
+  <ion-item>
+    <ion-label position="floating">Username</ion-label>
+    <ion-input value="usuario123" [disabled]="true"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">First name</ion-label>
+    <ion-input [(ngModel)]="firstName"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Last name</ion-label>
+    <ion-input [(ngModel)]="lastName"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Educational level</ion-label>
+    <ion-input [(ngModel)]="educationLevel"></ion-input>
+  </ion-item>
+  <br>
+  <br>
+  <div class="ion-text-center">
+    <ion-button size="medium" (click)="openDatePicker()">Birthdate</ion-button>
+  </div>
+    
+  <br>
+  <br>
+  <div class="ion-text-center ion-margin-top">
+    <ion-button color="medium" (click)="clearFields()">Clear</ion-button>
+    <ion-button color="medium" (click)="presentAlert()">Save</ion-button>
+  </div>
 </ion-content>
