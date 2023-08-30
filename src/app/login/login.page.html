@@ -30,7 +30,7 @@
     </ion-item>
 
     <div class="ion-text-center">
-      <ion-button [routerLink]="['/login-exitoso']" color="medium" >Login</ion-button>
+      <ion-button (click)="validacionLogin()" color="medium" >Login</ion-button>
       <ion-button color="medium" (click)="clearAnimation()">Clear</ion-button>
     </div>
     </ion-card-content>
