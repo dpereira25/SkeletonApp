@@ -51,9 +51,9 @@ export class LoginPage implements OnInit {
 
   validacionLogin(){
     if (this.username == 'usuario' && this.password == '1234'){
-      this.router.navigate(['/login'])
+      this.router.navigate(['/login-exitoso'])
     }else{
-      
+      this.presentAlert();
     }
   }
 
